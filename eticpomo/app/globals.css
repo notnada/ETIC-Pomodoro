@@ -1,15 +1,217 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/Gotham Fonts Family/Gotham-Book.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('/Gotham Fonts Family/GOTHAM-MEDIUM.TTF') format('truetype');
+  font-weight: bold;
+}
+
+.gotham-book {
+  font-weight: normal;
+  font-family: 'Gotham', sans-serif;
+}
+
+.gotham-medium {
+  font-weight: bold;
+  font-family: 'Gotham', sans-serif;
+}
+
+/* Brand Color Classes */
+.text-brand-teal {
+  color: var(--color-brand-teal);
+}
+
+.text-brand-orange {
+  color: var(--color-brand-orange);
+}
+
+.text-brand-dark {
+  color: var(--color-brand-dark);
+}
+
+.text-brand-body {
+  color: var(--color-brand-body);
+}
+
+.bg-brand-dark {
+  background-color: var(--color-brand-dark);
+}
+
+/* Responsive Title Sizing - scales from mobile to desktop */
+.title-responsive {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .title-responsive {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-responsive {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-responsive {
+    font-size: 54px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .title-responsive {
+    font-size: 59.86px;
+  }
+}
+
+/* Responsive Body Text Sizing */
+.text-responsive {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (min-width: 640px) {
+  .text-responsive {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-responsive {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive {
+    font-size: 18.5px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .text-responsive {
+    font-size: 20px;
+  }
+}
+
+/* Responsive Container - maintains 1157px max width on desktop */
+.container-responsive {
+  width: 100%;
+  max-width: 1157px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-responsive {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Responsive Spacing - 45px on desktop, scales down */
+.gap-section {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  .gap-section {
+    margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gap-section {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gap-section {
+    margin-bottom: 38px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .gap-section {
+    margin-bottom: 45px;
+  }
+}
+
+/* Title to text spacing - 25px on desktop */
+.gap-title-text {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 640px) {
+  .gap-title-text {
+    margin-bottom: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .gap-title-text {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gap-title-text {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .gap-title-text {
+    margin-bottom: 25px;
+  }
+}
+
+.nav-link {
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-teal: #20B3AD;
+  --color-brand-orange: #EB9223;
+  --color-brand-dark: #212121;
+  --color-brand-body: #2D2D2D;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +224,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Gotham', Arial, Helvetica, sans-serif;
 }
